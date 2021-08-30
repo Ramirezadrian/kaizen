@@ -1,0 +1,162 @@
+@import './estilos';
+@import './variables';
+@each $key,
+$color in $colors {
+    .bg-#{$key} {
+        background-color: $color;
+    }
+}
+
+
+/*  INDEX SECTION   */
+
+#indexSection {
+    background-image: url(../imagenes/fondoHome.jpg);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+#textoP {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+        font-size: 10rem;
+        text-align: center;
+        color: #ffffff;
+        margin-bottom: 4rem;
+    }
+    p {
+        font-family: 'WindSong', cursive;
+        font-size: 6rem;
+        color: #ffffff!important;
+    }
+}
+
+#imagenHome {
+    background-image: url(../imagenes/logo-redondo.png);
+    height: 80vh;
+    width: 50vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 2rem;
+}
+
+
+/*  SECTION HORARIOS   */
+
+#imagenHorarios {
+    background-image: url(../imagenes/001.jpg);
+    height: 100vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#tabla {
+    margin-left: 1rem;
+    font-family: 'Comfortaa', cursive;
+    font-size: 12px;
+    text-align: center;
+}
+
+table {
+    width: 100vw;
+    margin-right: 2rem;
+    caption {
+        font-size: 3rem;
+        text-align: center;
+        padding-bottom: 4rem;
+    }
+    tr {
+        th {
+            background: #65A603;
+            color: #FFFFFF;
+            padding: 1rem 2rem;
+            margin: auto;
+        }
+        td {
+            border-bottom: 1px solid #65A603;
+            padding: 1rem 2rem 0;
+            font-weight: bold;
+        }
+    }
+}
+
+
+/*SECTION CONTACTO*/
+
+.textoContacto {
+    div {
+        border-radius: 2rem;
+        margin-left: 2rem;
+        h2 {
+            font-size: 3rem;
+            margin: 40px;
+            text-align: center;
+        }
+        article {
+            p {
+                text-align: center;
+                font-family: 'Comfortaa', cursive;
+                font-size: 1.8rem;
+                color: #FFFFFF;
+                letter-spacing: 5px;
+                line-height: 30px;
+                margin: 0 3rem;
+                padding: 2rem;
+            }
+        }
+    }
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    label {
+        font-family: 'Comfortaa';
+        font-weight: 100;
+        font-size: 1.4rem;
+        color: #65A603;
+        font-weight: 700;
+        padding: 5px;
+    }
+}
+
+.botonera {
+    margin: 1rem;
+}
+
+.btn {
+    background: #65A603;
+    color: white;
+    border-style: none;
+    height: 3rem;
+    padding: 5px;
+    margin: 1rem;
+    border-radius: 1rem;
+}
+
+.btn:hover {
+    background-color: #2b2b2b;
+    color: #FFFFFF;
+    transform: scale(1.1);
+    transition: ease-in-out 0.2s;
+}
+
+
+/*ERROR 404*/
+
+.error404 {
+    background-image: url(../imagenes/error404.png);
+    height: 100vh;
+    width: 90vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+}

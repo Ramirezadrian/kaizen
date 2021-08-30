@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contactate con Kaizen pilates">
+    <meta name="keywords" content="CONTACTO, PILATES, YOGA, EJERCICIOS, BIENESTAR, SALUD">
+    <meta name="robots" content="index" />
+    <title>KAIZEN | CONTACTO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <!--FRAME 1 (HOME)-->
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <picture>
+                    <a href="index.html">
+                        <img src="imagenes/logo-redondo.png" alt="logo">
+                    </a>
+                </picture>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+                <div class="collapse navbar-collapse flexEnd" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotros.html">BENEFICIOS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="galeria.html">GALERIA</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="horarios.html">HORARIOS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">CONTACTO</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="row justify-content-around">
+            <section class="textoContacto col-sm-5">
+                <div class="bg-verde">
+                    <h2>Contactanos!</h2>
+                    <article>
+                        <p>Hablar con nosotros es muy facil!, solo rellena el formulario con tu consulta y a la brevedad te responderemos.</p>
+                    </article>
+                </div>
+            </section>
+
+            <!--FORMULARIO-->
+
+            <FORM class="formulario col-sm-5 bg-gris">
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre">
+
+                <label for="email">Email</label>
+                <input type="email" name="email" required>
+
+                <label for="mensaje">Escribi tu mensaje</label>
+                <textarea cols="30" rows="10" name="mensaje"></textarea>
+
+                <label>¿Haces otras actividades fisicas?</label>
+                <div>
+                    <label>SI</label><input type="radio" name="deporte" value="si">
+                    <label>NO</label><input type="radio" name="deporte" value="no">
+                </div>
+                <label for="actividad">¿Cuantas veces por semana?:</label>
+                <select name="actividad" id="">
+                        <option value="1">1</option>
+                        <option value="2y5">entre 2 y 5</option>
+                        <option value="mas5">más de 5</option>
+                    </select>
+                <div class="botonera">
+                    <input type="submit" value="Enviar formulario" class="btn">
+                    <input type="reset" value="Limpiar formulario" class="btn">
+                </div>
+
+
+            </FORM>
+        </section>
+        <section class="footer flex-row">
+            <footer class="footerLinks">
+
+                <nav class="footerLinks__nav">
+                    <ul class="footerLinks__nav__ul">
+                        <li class="footerLinks__nav__ul__li">
+                            <a class="footerLinks__nav__ul__li__a" href="index.html">HOME</a>
+                        </li>
+                        <li>
+                            <a class="footerLinks__nav__ul__li__a" href="nosotros.html">BENEFICIOS</a>
+                        </li>
+
+                        <li>
+                            <a class="footerLinks__nav__ul__li__a" href="galeria.html">GALERIA</a>
+                        </li>
+
+                        <li>
+                            <a class="footerLinks__nav__ul__li__a" href="horarios.html">HORARIOS</a>
+                        </li>
+                        <li>
+                            <a class="footerLinks__nav__ul__li__a" href="contacto.html">CONTACTO</a>
+                        </li>
+                    </ul>
+                </nav>
+
+
+                <div class="footerLinks__footerRedes">
+                    <a class="footerLinks__footerRedes__a" href=""><img src="imagenes/instagram.png" alt=""></a>
+                    <a class="footerLinks__footerRedes__a" href=""><img src="imagenes/whatsapp.png" alt=""></a>
+                    <a class="footerLinks__footerRedes__a" href=""><img src="imagenes/tik-tok.png" alt=""></a>
+                </div>
+
+
+            </footer>
+            <p>Todos los derechos reservados. Ramma 2021</p>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</body>
+
+</html>

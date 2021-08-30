@@ -1,0 +1,221 @@
+    @import url('https://fonts.googleapis.com/css2?family=WindSong&display=swap');
+    /* NORMALIZADOR */
+    
+    *,
+    *::after,
+    *::before {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        color: #2b2b2b;
+    }
+    /* ESTILOS GLOBALES */
+    
+    html {
+        font-family: 'Comfortaa', cursive;
+        font-size: 62.5%;
+        /* font-size: 16px; = 10px */
+    }
+    
+    h1 {
+        font-size: 4.2rem;
+    }
+    /* UTILS */
+    
+    .flex-row {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .flex-col {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .grid {
+        display: grid;
+    }
+    /* MAIN HEADER */
+    
+    #mainHeader {
+        background: linear-gradient(to right, rgba(135, 135, 135, 1) 0%, rgba(255, 255, 255, 1) 100%);
+        text-align: center;
+        min-height: 10vh;
+        justify-content: space-between;
+        align-items: center;
+        width: 100vw;
+        z-index: 2;
+        padding: 1rem 4rem;
+    }
+    
+    .flexEnd {
+        justify-content: flex-end;
+    }
+    
+    header {
+        nav {
+            div {
+                picture {
+                    a {
+                        img {
+                            max-width: 100px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    nav ul {
+        list-style-type: none;
+        justify-content: right;
+    }
+    
+    nav ul li {
+        margin: 0 10px;
+        font-size: 20px;
+        font-family: 'Comfortaa', serif;
+    }
+    
+    nav ul li a:hover {
+        border-bottom: 2px solid #2b2b2b;
+        border-top: 2px solid #2b2b2b;
+        /*  outline: 2px solid #2b2b2b;*/
+        transition: 0.1s;
+    }
+    
+    nav ul li a {
+        color: green!important;
+        padding: 10px 15px!important;
+        outline: 2px solid transparent;
+        text-decoration: none;
+    }
+    /*  SECTION GALERIA */
+    
+    #galeriaSection {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 1fr 0.2fr;
+        grid-template-areas: "titulo" "galeria" "footer";
+        .galeriaTitulo {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            &__title {
+                font-size: 4rem;
+                margin: auto 0;
+                color: #65A603;
+                text-align: center;
+            }
+        }
+        .galeria {
+            grid-area: galeria;
+            display: flex;
+            height: 100vh;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-content: space-around;
+            &__img01:hover {
+                transform: scale(1.1);
+                transition: ease-in-out 0.3s;
+            }
+            &__img02:hover {
+                transform: scale(1.1);
+                transition: ease-in-out 0.3s;
+            }
+            &__img03:hover {
+                transform: scale(1.1);
+                transition: ease-in-out 0.3s;
+            }
+            &__img04:hover {
+                transform: scale(1.1);
+                transition: ease-in-out 0.3s;
+            }
+            &__img05:hover {
+                transform: scale(1.1);
+                transition: ease-in-out 0.3s;
+            }
+            &__img06:hover {
+                transform: scale(1.1);
+                transition: ease-in-out 0.3s;
+            }
+            &__img01 {
+                background-image: url(../imagenes/elongacion.jpg);
+            }
+            &__img02 {
+                background-image: url(../imagenes/spinning.jpg);
+            }
+            &__img03 {
+                background-image: url(../imagenes/yoga01.jpg);
+            }
+            &__img04 {
+                background-image: url(../imagenes/yoga02.jpg);
+            }
+            &__img05 {
+                background-image: url(../imagenes/yoga03.jpg);
+            }
+            &__img06 {
+                background-image: url(../imagenes/001.jpg);
+            }
+            * {
+                margin: 1rem;
+                width: 30vw;
+                height: 45vh;
+                background-size: cover;
+                background-repeat: no-repeat;
+                border-radius: 1rem;
+            }
+        }
+    }
+    
+    #galeriaSection .footer {
+        grid-area: footer;
+    }
+    
+    #galeriaSection .galeriaTitulo {
+        grid-area: titulo;
+    }
+    /*  FOOTER  */
+    
+    .footer {
+        min-height: 10vh;
+        width: 100vw;
+        /* background-color: #5b5a5d;*/
+        /*background-color: #3dbc31;*/
+        background: linear-gradient(to right, rgba(6, 107, 6, 1) 0%, rgba(85, 216, 65, 1) 100%);
+        flex-wrap: wrap;
+        p {
+            text-align: center;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            color: white;
+            margin: 0 auto;
+        }
+        .footerLinks {
+            width: 100vw;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            &__nav {
+                &__ul {
+                    display: flex;
+                    list-style-type: none;
+                    &__li {
+                        &__a {
+                            text-decoration: none;
+                            color: white !important;
+                            font-size: 1.5rem;
+                            margin: 0 2rem;
+                        }
+                    }
+                }
+            }
+            &__footerRedes {
+                &__a {
+                    img {
+                        max-width: 30px;
+                        margin: 0 20px;
+                    }
+                }
+            }
+        }
+    }
