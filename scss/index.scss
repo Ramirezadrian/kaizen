@@ -1,5 +1,8 @@
+@import './header';
 @import './estilos';
 @import './variables';
+@import './globales';
+@import './footer';
 @each $key,
 $color in $colors {
     .bg-#{$key} {
