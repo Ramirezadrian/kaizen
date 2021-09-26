@@ -26,30 +26,26 @@
                  }
              }
          }
+         ul {
+             list-style-type: none;
+             justify-content: right;
+             li {
+                 margin: 0 10px;
+                 font-size: 20px;
+                 font-family: 'Comfortaa', serif;
+                 a {
+                     color: green!important;
+                     padding: 10px 15px!important;
+                     outline: 2px solid transparent;
+                     text-decoration: none;
+                 }
+             }
+         }
      }
- }
- 
- nav ul {
-     list-style-type: none;
-     justify-content: right;
- }
- 
- nav ul li {
-     margin: 0 10px;
-     font-size: 20px;
-     font-family: 'Comfortaa', serif;
  }
  
  nav ul li a:hover {
      border-bottom: 2px solid #2b2b2b;
      border-top: 2px solid #2b2b2b;
-     /*  outline: 2px solid #2b2b2b;*/
      transition: 0.1s;
- }
- 
- nav ul li a {
-     color: green!important;
-     padding: 10px 15px!important;
-     outline: 2px solid transparent;
-     text-decoration: none;
  }

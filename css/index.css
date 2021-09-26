@@ -16,32 +16,29 @@
 header nav div picture a img {
   max-width: 100px; }
 
-nav ul {
+header nav ul {
   list-style-type: none;
   justify-content: right; }
-
-nav ul li {
-  margin: 0 10px;
-  font-size: 20px;
-  font-family: 'Comfortaa', serif; }
+  header nav ul li {
+    margin: 0 10px;
+    font-size: 20px;
+    font-family: 'Comfortaa', serif; }
+    header nav ul li a {
+      color: green !important;
+      padding: 10px 15px !important;
+      outline: 2px solid transparent;
+      text-decoration: none; }
 
 nav ul li a:hover {
   border-bottom: 2px solid #2b2b2b;
   border-top: 2px solid #2b2b2b;
-  /*  outline: 2px solid #2b2b2b;*/
   transition: 0.1s; }
-
-nav ul li a {
-  color: green !important;
-  padding: 10px 15px !important;
-  outline: 2px solid transparent;
-  text-decoration: none; }
 
 /*  SECTION GALERIA */
 #galeriaSection {
   grid-template-columns: 1fr;
-  grid-template-rows: 0.1fr 1fr 0.2fr;
-  grid-template-areas: "titulo" "galeria" "footer"; }
+  grid-template-rows: 0.1fr 1fr;
+  grid-template-areas: "titulo" "galeria"; }
   #galeriaSection .galeriaTitulo {
     display: flex;
     justify-content: center;
@@ -96,11 +93,91 @@ nav ul li a {
       background-repeat: no-repeat;
       border-radius: 1rem; }
 
-#galeriaSection .footer {
-  grid-area: footer; }
-
 #galeriaSection .galeriaTitulo {
   grid-area: titulo; }
+
+@media only screen and (max-width: 599px) {
+  #galeriaSection {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 3fr;
+    grid-template-areas: "titulo" "galeria";
+    margin-bottom: 8rem; }
+  .galeriaTitulo {
+    margin-bottom: 15rem; } }
+
+/*  SECTION HORARIOS   */
+#tabla {
+  margin-bottom: 3rem;
+  font-family: 'Comfortaa', cursive;
+  font-size: 12px;
+  text-align: center; }
+
+table {
+  width: 100vw;
+  margin-right: 2rem; }
+  table caption {
+    font-size: 3rem;
+    text-align: center;
+    padding-bottom: 4rem; }
+  table tr th {
+    background: #65A603;
+    color: #FFFFFF;
+    padding: 1rem 2rem;
+    margin: auto; }
+  table tr td {
+    border-bottom: 1px solid #65A603;
+    padding: 1rem 2rem 0;
+    font-weight: bold; }
+
+/*SECTION CONTACTO*/
+.textoContacto div {
+  border-radius: 2rem;
+  margin-left: 2rem; }
+  .textoContacto div h2 {
+    font-size: 3rem;
+    text-align: center; }
+  .textoContacto div article p {
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+    font-size: 1.8rem;
+    color: #FFFFFF;
+    letter-spacing: 5px;
+    line-height: 30px;
+    padding: 2rem; }
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+form {
+  border-radius: 15px;
+  margin-bottom: 2rem; }
+  form label {
+    font-family: 'Comfortaa';
+    font-weight: 100;
+    font-size: 1.4rem;
+    color: #65A603;
+    font-weight: 700;
+    padding: 5px; }
+
+.botonera {
+  margin: 1rem; }
+
+.btn {
+  background: #65A603;
+  color: white;
+  border-style: none;
+  height: 3rem;
+  padding: 5px;
+  margin: 1rem;
+  border-radius: 1rem; }
+
+.btn:hover {
+  background-color: #b4f141;
+  color: #FFFFFF;
+  transform: scale(1.1);
+  transition: ease-in-out 0.2s; }
 
 /* NORMALIZADOR */
 *,
@@ -135,9 +212,6 @@ h1 {
 /*  FOOTER  */
 .footer {
   min-height: 10vh;
-  width: 100vw;
-  /* background-color: #5b5a5d;*/
-  /*background-color: #3dbc31;*/
   background: linear-gradient(to right, #066b06 0%, #55d841 100%);
   flex-wrap: wrap; }
   .footer p {
@@ -146,22 +220,29 @@ h1 {
     letter-spacing: 2px;
     color: white;
     margin: 0 auto; }
-  .footer .footerLinks {
-    width: 100vw;
-    display: flex;
-    justify-content: space-around;
-    align-items: center; }
-    .footer .footerLinks__nav__ul {
-      display: flex;
-      list-style-type: none; }
-      .footer .footerLinks__nav__ul__li__a {
-        text-decoration: none;
-        color: white !important;
-        font-size: 1.5rem;
-        margin: 0 2rem; }
-    .footer .footerLinks__footerRedes__a img {
-      max-width: 30px;
-      margin: 0 20px; }
+
+.footerLinks {
+  /*width: 100vw;*/
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+
+footer nav ul {
+  display: flex;
+  list-style-type: none; }
+  footer nav ul a {
+    text-decoration: none;
+    color: white !important;
+    font-size: 1.5rem;
+    margin: 0 2rem; }
+
+nav ul a:hover {
+  transform: scale(1.1);
+  transition: ease-in-out 0.2s; }
+
+.footerRedes a img {
+  max-width: 30px;
+  margin: 0 20px; }
 
 .bg-verde {
   background-color: #65A603; }
@@ -180,6 +261,7 @@ h1 {
   flex-direction: column;
   align-items: center; }
   #textoP h1 {
+    margin-top: 2rem;
     font-size: 10rem;
     text-align: center;
     color: #ffffff;
@@ -187,7 +269,8 @@ h1 {
   #textoP p {
     font-family: 'WindSong', cursive;
     font-size: 6rem;
-    color: #ffffff !important; }
+    color: #ffffff !important;
+    text-align: center; }
 
 #imagenHome {
   background-image: url(../imagenes/logo-redondo.png);
@@ -196,89 +279,6 @@ h1 {
   background-size: contain;
   background-repeat: no-repeat;
   margin-left: 2rem; }
-
-/*  SECTION HORARIOS   */
-#imagenHorarios {
-  background-image: url(../imagenes/001.jpg);
-  height: 100vh;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-attachment: fixed; }
-
-#tabla {
-  margin-left: 1rem;
-  font-family: 'Comfortaa', cursive;
-  font-size: 12px;
-  text-align: center; }
-
-table {
-  width: 100vw;
-  margin-right: 2rem; }
-  table caption {
-    font-size: 3rem;
-    text-align: center;
-    padding-bottom: 4rem; }
-  table tr th {
-    background: #65A603;
-    color: #FFFFFF;
-    padding: 1rem 2rem;
-    margin: auto; }
-  table tr td {
-    border-bottom: 1px solid #65A603;
-    padding: 1rem 2rem 0;
-    font-weight: bold; }
-
-/*SECTION CONTACTO*/
-.textoContacto div {
-  border-radius: 2rem;
-  margin-left: 2rem; }
-  .textoContacto div h2 {
-    font-size: 3rem;
-    margin: 40px;
-    text-align: center; }
-  .textoContacto div article p {
-    text-align: center;
-    font-family: 'Comfortaa', cursive;
-    font-size: 1.8rem;
-    color: #FFFFFF;
-    letter-spacing: 5px;
-    line-height: 30px;
-    margin: 0 3rem;
-    padding: 2rem; }
-
-.formulario {
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
-
-form {
-  border-radius: 15px;
-  margin-bottom: 2rem; }
-  form label {
-    font-family: 'Comfortaa';
-    font-weight: 100;
-    font-size: 1.4rem;
-    color: #65A603;
-    font-weight: 700;
-    padding: 5px; }
-
-.botonera {
-  margin: 1rem; }
-
-.btn {
-  background: #65A603;
-  color: white;
-  border-style: none;
-  height: 3rem;
-  padding: 5px;
-  margin: 1rem;
-  border-radius: 1rem; }
-
-.btn:hover {
-  background-color: #2b2b2b;
-  color: #FFFFFF;
-  transform: scale(1.1);
-  transition: ease-in-out 0.2s; }
 
 /*ERROR 404*/
 .error404 {
